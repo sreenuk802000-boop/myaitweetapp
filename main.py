@@ -15,11 +15,11 @@ st.subheader("Generate tweets using Generative AI")
 
 topic = st.text_input("Topic")
 num_tweets = st.number_input("Nnumber of tweets", min_value=1, max_value=10, value=1, step=1)
-tweets = None
+
 if st.button("Generate"):
     tweets=chain.invoke({"number":num_tweets,"topic" :topic})
-if tweets:
     st.write(tweets.content)
+
 
 
 
