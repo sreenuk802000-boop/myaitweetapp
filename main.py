@@ -18,7 +18,8 @@ num_tweets = st.number_input("Nnumber of tweets", min_value=1, max_value=10, val
 
 if st.button("Generate"):
     tweets=chain.invoke({"number":num_tweets,"topic" :topic})
-    st.write(tweets.content)
+st.write(tweets.content)
+
 
 
 
