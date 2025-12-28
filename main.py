@@ -14,10 +14,11 @@ import streamlit as st
 st.header("Tweet Generator")
 st.subheader("Generate tweets using Generative AI")
 
-topic = st.text_input("Topic")
+topic = st.text_input("Topic",value="")
 num_tweets = st.number_input("Nnumber of tweets", min_value=1, max_value=10, value=1, step=1)
 if st.button("Generate"):
     tweets=chain.invoke({"number":num_tweets,"topic" :topic})
 
 st.write(tweets.content)
+
 
