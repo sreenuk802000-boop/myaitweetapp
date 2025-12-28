@@ -1,2 +1,4 @@
-This is Tweet app using gemeni ai model
-Dowload apikey
+langchain
+langchain-openai
+langchain-google-genai
+streamlit
