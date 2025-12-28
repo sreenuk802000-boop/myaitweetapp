@@ -1,0 +1,2 @@
+This is Tweet app using gemeni ai model
+Dowload apikey
