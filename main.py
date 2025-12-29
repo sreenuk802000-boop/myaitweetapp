@@ -3,7 +3,7 @@ from langchain_core.prompts import PromptTemplate
 import streamlit as st
 import os
 
-os.environ["GOOGLE_API_KEY"]="AIzaSyAH6A_uQy_Phff-n-5X2nHmWKw_52iJqqk"
+os.environ["GOOGLE_API_KEY"]="AIzaSyCo4JKbuf7kJHyWA2TTqAfmrw0CSgqPD2k"
 tweet_template="Give me {number} tweets on {topic}"
 tweet_prompt=PromptTemplate(template=tweet_template,input_variables=['number','topic'])
 gemini_model=ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite")
@@ -18,6 +18,7 @@ if st.button("Generate"):
     tweets=chain.invoke({"number":num_tweets,"topic" :topic})
 if tweets:    
     st.write(tweets.content)
+
 
 
 
